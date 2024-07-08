@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/quiz_system
+    username: root
+    password: Abc12345@
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+jwt:
+  privateKey: zfKJa79ivNKWCR0eDGoBv+2DO98bGYZ9gfXkuzbdEVQ=
+
+frontend:
+  url: http://localhost:5173/
