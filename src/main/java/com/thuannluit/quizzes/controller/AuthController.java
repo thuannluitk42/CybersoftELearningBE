@@ -8,6 +8,9 @@ import com.thuannluit.quizzes.repository.UserRepository;
 import com.thuannluit.quizzes.service.ILoginService;
 import com.thuannluit.quizzes.service.IUserService;
 import com.thuannluit.quizzes.utils.JwtUtilsHelper;
+import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.io.Encoders;
+import io.jsonwebtoken.security.Keys;
 import org.apache.coyote.BadRequestException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,6 +20,8 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+
+import javax.crypto.SecretKey;
 
 @CrossOrigin("http://localhost:5173")
 @RestController
@@ -44,7 +49,9 @@ public class AuthController {
         System.out.println("authenticateUser:" + loginDto.getUsername() + "-------" + loginDto.getPassword());
 
         AuthResponse authResponse = new AuthResponse();
-
+        SecretKey secretKey = Keys.secretKeyFor(SignatureAlgorithm.HS256);
+        String encrypted = Encoders.BASE64.encode(secretKey.getEncoded());
+        System.out.println(encrypted);
         if (loginService.checkLogin(loginDto.getUsername(), loginDto.getPassword())) {
             String token = jwtUtilsHelper.generateToken(loginDto.getUsername());
             authResponse.setMessage("Login success");
