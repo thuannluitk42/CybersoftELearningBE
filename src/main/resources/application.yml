@@ -7,7 +7,7 @@ spring:
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
@@ -16,4 +16,4 @@ jwt:
   privateKey: zfKJa79ivNKWCR0eDGoBv+2DO98bGYZ9gfXkuzbdEVQ=
 
 frontend:
-  url: https://thuannluit-cybersoft-e-learning-d5l6rd7ex.vercel.app/
+  url: https://thuannluit-cybersoft-e-learning.vercel.app/
