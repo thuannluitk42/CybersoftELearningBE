@@ -49,9 +49,9 @@ public class AuthController {
         System.out.println("authenticateUser:" + loginDto.getUsername() + "-------" + loginDto.getPassword());
 
         AuthResponse authResponse = new AuthResponse();
-        SecretKey secretKey = Keys.secretKeyFor(SignatureAlgorithm.HS256);
-        String encrypted = Encoders.BASE64.encode(secretKey.getEncoded());
-        System.out.println(encrypted);
+        //SecretKey secretKey = Keys.secretKeyFor(SignatureAlgorithm.HS256);
+        //String encrypted = Encoders.BASE64.encode(secretKey.getEncoded());
+        //System.out.println(encrypted);
         if (loginService.checkLogin(loginDto.getUsername(), loginDto.getPassword())) {
             String token = jwtUtilsHelper.generateToken(loginDto.getUsername());
             authResponse.setMessage("Login success");
