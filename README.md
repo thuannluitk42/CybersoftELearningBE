@@ -2,8 +2,7 @@
 Em có thể làm đc vào các khung giờ dưới:
 T7 – CN: Sáng 8h30 - 11h30 và 14h30 - 17h30
 
-2. Trong 1 ngày bạn dành ra bao nhiêu thời gian để check ib của học viên khi các bạn đó có
-thắc mắc ib trên group hoặc inbox riêng.
+2. Trong 1 ngày bạn dành ra bao nhiêu thời gian để check ib của học viên khi các bạn đó có thắc mắc ib trên group hoặc inbox riêng.
 Trong 1 ngày em dành được 4 tiếng để có thể phản hồi các câu hỏi của các bạn qua teamview
 
 3. Nếu nhận được 1 lỗi phát sinh 500 error server bạn sẽ xử lý như thế nào khi gặp những
@@ -22,11 +21,10 @@ Truy cập vào server logs để xem chi tiết lỗi được ghi lại trên 
 - Nếu lỗi nằm trong khả năng giải quyết, cố gắng sửa lỗi một cách nhanh chóng và thử nghiệm lại để đảm bảo nó đã được khắc phục.
 - Nếu lỗi không nằm trong khả năng giải quyết, thông báo lại cho giảng viên .
 
-5. Nếu được sắp vào khung giờ cố định thì công việc chính của bạn có ảnh hưởng đến việc
-mentor hay không ví dụ như OT ?
-- Không ảnh hưởng công việc
+4. Nếu được sắp vào khung giờ cố định thì công việc chính của bạn có ảnh hưởng đến việc mentor hay không ví dụ như OT ?
+- Em đã sắp xếp thời gian gọn gàng trước khi đi đến quyết định làm mentor cho trung tâm ạ.
 
-7. Tại sao bạn apply công việc này ?
+5. Tại sao bạn apply công việc này ?
 - Em muốn học hỏi thêm kiến thức trong ngành thông qua việc làm mentor cũng như xem cách giảng viên dạy học viên để tương lai trở thành giảng viên của cybersoft.
 - Em rất mong muốn mình trở thành 1 thành viên của cybersoft.
 - Trước đây, em có đăng ký nhiều khóa học bên mình và may mắn có được công việc từ khóa học đó.
