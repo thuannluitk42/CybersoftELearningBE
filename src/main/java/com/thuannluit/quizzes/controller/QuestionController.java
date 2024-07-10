@@ -1,12 +1,16 @@
 package com.thuannluit.quizzes.controller;
 
+import com.thuannluit.quizzes.entity.Posts;
 import com.thuannluit.quizzes.entity.Question;
 import com.thuannluit.quizzes.entity.UserQuizHistory;
 import com.thuannluit.quizzes.payload.AchievementDto;
+import com.thuannluit.quizzes.payload.PostReq;
+import com.thuannluit.quizzes.repository.PostRepository;
 import com.thuannluit.quizzes.service.IQuestionService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.crossstore.ChangeSetPersister;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import io.swagger.v3.oas.annotations.Operation;
@@ -27,6 +31,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class QuestionController {
     private final IQuestionService questionService;
+    private final PostRepository postRepository;
 
     @Operation(summary = "Create a new question")
     @ApiResponses(value = {
@@ -133,5 +138,16 @@ public class QuestionController {
     public ResponseEntity<List<AchievementDto>> getAchievementsForUser(@PathVariable String userName) {
         List<AchievementDto> uqh = questionService.getAchievementsForUser(userName);
         return ResponseEntity.status(CREATED).body(uqh);
+    }
+
+    @PostMapping("/posts")
+    public ResponseEntity<Posts> createPost(@RequestBody PostReq postReq) {
+        try {
+            Posts p = postRepository
+                    .save(new Posts(postReq.getTitle(), postReq.getContent()));
+            return new ResponseEntity<>(p, HttpStatus.CREATED);
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 }
