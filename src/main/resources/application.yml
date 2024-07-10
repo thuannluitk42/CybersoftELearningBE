@@ -13,7 +13,7 @@ spring:
         dialect: org.hibernate.dialect.MySQL8Dialect
 
 jwt:
-  privateKey: zfKJa79ivNKWCR0eDGoBv+2DO98bGYZ9gfXkuzbdEVQ=
-
+  privateKey: Km8Wx3npXN8nKCQOnegloMEPOdVskjXUVGaqmKwXnm0=
+  
 frontend:
   url: https://thuannluit-cybersoft-e-learning.vercel.app/
